@@ -11,7 +11,7 @@ const userRoutes = require("./routes/user.js");
 
 // Define CORS options
 const corsOptions = {
-  origin: "https://website-79fc5fea.hjm.zca.mybluehost.me"
+  origin: "https://website-79fc5fea.hjm.zca.mybluehost.me",
 };
 
 // Use CORS middleware with custom options
