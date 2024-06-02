@@ -9,13 +9,8 @@ const listingRoutes = require("./routes/listing.js");
 const bookingRoutes = require("./routes/booking.js");
 const userRoutes = require("./routes/user.js");
 
-// Define CORS options
-const corsOptions = {
-  origin: "https://website-79fc5fea.hjm.zca.mybluehost.me",
-};
-
 // Use CORS middleware with custom options
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.static("public"));
