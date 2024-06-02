@@ -19,9 +19,9 @@ app.use("/properties", listingRoutes);
 app.use("/bookings", bookingRoutes);
 app.use("/users", userRoutes);
 
-/* HELLO ROUTE */
-app.get("/hello", (req, res) => {
-  res.send("Hello");
+/* ROOT ROUTE */
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 /* MONGOOSE SETUP */
