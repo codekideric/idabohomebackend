@@ -45,7 +45,7 @@ router.post("/create", async (req, res) => {
     // Send email confirmation to the customer
     const mailOptions = {
       from: process.env.EMAIL,
-      to: 'idabomovingandstorage@gmail.com',
+      to: 'idabohomes2@gmail.com',
       subject: 'New Booking Confirmation',
       text: `Booking Details:
         - Customer Name: ${customerName}
