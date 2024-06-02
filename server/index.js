@@ -21,11 +21,11 @@ app.use("/users", userRoutes);
 
 /* ROOT ROUTE */
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.send("<h1>Hello</h1>");
 });
 
 /* MONGOOSE SETUP */
-const PORT = 3001;
+const PORT = process.env.PORT || 4000;
 mongoose
   .connect(process.env.MONGO_URL, {
     dbName: "idabo_homes",
@@ -36,3 +36,5 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
   .catch((err) => console.log(`${err} did not connect`));
+
+module.exports = app;
